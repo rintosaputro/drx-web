@@ -28,3 +28,19 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🧠 Brief Explanation of My Approach
+
+### Tech Stack:
+
+- Next.js (App Router) – for server rendering, routing, and SSG/ISR.
+- Tailwind CSS – for utility-first styling.
+- TypeScript – for type safety and scalability.
+
+### Features Implemented:
+
+- Product listing page
+- Product detail page
+- Infinite scroll pagination
+- Server side data fetching
+- SEO ready with SSG and SSR
