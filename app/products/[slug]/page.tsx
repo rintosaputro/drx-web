@@ -10,16 +10,17 @@ export async function generateStaticParams() {
   const products: Product[] = await res.json();
 
   return products.map((product) => ({
-    slug: product.id.toString(),
+    slug: `${product.id}`,
   }));
 }
 
 export default async function ProductDetail({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const res = await fetch(`${API_URL}/products/${params.slug}`, {
+  const { slug } = await params;
+  const res = await fetch(`${API_URL}/products/${slug}`, {
     next: { revalidate: 60 },
   });
 
