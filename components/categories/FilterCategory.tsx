@@ -50,7 +50,7 @@ const FilterCategory = () => {
     <>
       <select
         id="countries"
-        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-auto p-2.5"
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-auto sm:w-fit p-2.5"
         onChange={onChange}
         value={value}
       >

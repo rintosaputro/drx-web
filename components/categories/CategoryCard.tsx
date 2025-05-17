@@ -14,8 +14,14 @@ const CategoryCard: FC<Props> = ({ id, image, name }) => {
       href={`/products/?categoryId=${id}`}
       className="w-fit block hover:shadow-cyan-600 hover:shadow-xl"
     >
-      <div className="shadow rounded-sm w-[200px] overflow-hidden">
-        <SafeImage src={image} alt={name} width={200} height={100} />
+      <div className="shadow rounded-sm w-[150px] sm:w-[200px] overflow-hidden">
+        <SafeImage
+          src={image}
+          alt={name}
+          width={200}
+          height={100}
+          className="w-[150px] sm:w-[200px] h-auto"
+        />
         <div className="px-2 py-3">
           <h3 className="font-semibold">{name}</h3>
         </div>

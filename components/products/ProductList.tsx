@@ -115,7 +115,7 @@ const ProductList = () => {
           Product not found
         </h2>
       ) : (
-        <ul className="mt-2 lg:mt-5 grid grid-cols-3 justify-items-center gap-3 lg:gap-6">
+        <ul className="mt-2 lg:mt-5 grid grid-cols-2 md:grid-cols-3 justify-items-center gap-3 lg:gap-6">
           {products.map((product) => (
             <ProductCard
               id={product.id}
@@ -129,7 +129,7 @@ const ProductList = () => {
       )}
 
       {isLoading && (
-        <ul className="mt-6 grid grid-cols-3 justify-items-center gap-3 lg:gap-6">
+        <ul className="mt-6 grid grid-cols-2 md:grid-cols-3 justify-items-center gap-3 lg:gap-6">
           {[...Array(LIMIT)].map((_, idx) => (
             <div
               key={idx}

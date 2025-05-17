@@ -32,7 +32,7 @@ export default async function ProductDetail({
   return (
     <div className="min-h-screen py-8 lg:py-14">
       <Container>
-        <section className="grid grid-cols-2 gap-8">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex overflow-auto">
             {product.images.map((image) => (
               <SafeImage

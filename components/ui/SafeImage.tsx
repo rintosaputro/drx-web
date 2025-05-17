@@ -9,6 +9,7 @@ interface Props {
   fallbackSrc?: string;
   width?: number;
   height?: number;
+  className?: string;
 }
 
 const SafeImage = ({
@@ -17,6 +18,7 @@ const SafeImage = ({
   fallbackSrc = "/images/img-default.png",
   width = 300,
   height = 300,
+  className = "",
 }: Props) => {
   const [imgSrc, setImgSrc] = useState(src);
 
@@ -27,6 +29,7 @@ const SafeImage = ({
       width={width}
       height={height}
       onError={() => setImgSrc(fallbackSrc)}
+      className={className}
     />
   );
 };

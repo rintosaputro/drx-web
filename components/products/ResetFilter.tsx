@@ -14,7 +14,7 @@ const ResetFilter = () => {
     <button
       type="button"
       onClick={handleReset}
-      className="border border-cyan-500 rounded px-5 cursor-pointer"
+      className="border border-cyan-500 rounded px-5 py-2.5 w-auto sm:w-fit cursor-pointer"
     >
       Reset
     </button>

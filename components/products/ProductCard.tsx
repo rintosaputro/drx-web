@@ -15,9 +15,15 @@ const ProductCard: FC<Props> = ({ name, image, price, id }) => {
       href={`/products/${id}`}
       className="w-fit block hover:shadow-cyan-600 hover:shadow-xl"
     >
-      <div className="shadow rounded-sm w-[200px] overflow-hidden">
+      <div className="shadow rounded-sm w-[150px] sm:w-[200px] overflow-hidden">
         <div className="w-[200px] h-[200px] overflow-hidden">
-          <SafeImage src={image} alt={name} width={200} height={350} />
+          <SafeImage
+            src={image}
+            alt={name}
+            width={200}
+            height={350}
+            className="w-[150px] sm:w-[200px] h-auto"
+          />
         </div>
         <div className="px-2 py-3">
           <div>${price}</div>

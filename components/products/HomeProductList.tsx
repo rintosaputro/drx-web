@@ -17,7 +17,7 @@ const HomeProductList = async () => {
       <Link href="/products" className="hover:text-cyan-600">
         <h2 className="text-3xl font-semibold">Products</h2>
       </Link>
-      <ul className="mt-2 lg:mt-5 grid grid-cols-3 gap-3 lg:gap-6">
+      <ul className="mt-2 lg:mt-5 grid justify-items-center grid-cols-2 md:grid-cols-3 gap-3 lg:gap-6">
         {products.map((product) => (
           <li key={product.id}>
             <ProductCard

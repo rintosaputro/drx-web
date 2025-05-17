@@ -71,7 +71,7 @@ const FilterPrice = () => {
   }, [price_min, price_max]);
 
   return (
-    <div className="relative w-[200px]">
+    <div className="relative w-full sm:w-[200px]">
       <button
         type="button"
         onClick={onOpen}
@@ -86,14 +86,14 @@ const FilterPrice = () => {
             onChange={onChangeMin}
             value={priceMin || undefined}
             placeholder="minimal"
-            className="py-2.5 px-2.5 border"
+            className="py-2.5 px-2.5 border w-full"
           />
           <input
             type="number"
             onChange={onChangeMax}
             value={priceMax || undefined}
             placeholder="maximal"
-            className="py-2.5 px-2.5 border"
+            className="py-2.5 px-2.5 border w-full"
           />
           {error && <p className="text-red-400">{error}</p>}
           <div className="grid grid-cols-2">

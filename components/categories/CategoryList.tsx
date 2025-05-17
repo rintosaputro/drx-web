@@ -10,7 +10,7 @@ const CategoryList = async () => {
   return (
     <section className="mt-14">
       <h2 className="text-3xl font-semibold">Categories</h2>
-      <ul className="mt-2 lg:mt-5 grid grid-cols-3 gap-3 lg:gap-6">
+      <ul className="mt-2 lg:mt-5 grid justify-items-center grid-cols-2 md:grid-cols-3 gap-3 lg:gap-6">
         {categories.map((category) => (
           <li key={category.id}>
             <CategoryCard

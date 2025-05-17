@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ScrollToTop />
-        <nav className="bg-white text-black px-5 py-7 fixed w-full">
+        <nav className="bg-white text-black px-5 py-5 lg:py-7 fixed w-full shadow">
           <ul className="flex justify-center gap-9">
             <li>
               <Link
