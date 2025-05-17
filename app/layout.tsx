@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +27,30 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="bg-white text-black">{children}</div>
+        <ScrollToTop />
+        <nav className="bg-white text-black px-5 py-7 fixed w-full">
+          <ul className="flex justify-center gap-9">
+            <li>
+              <Link
+                href="/"
+                className="border border-cyan-600 text-cyan-600 py-2 px-7 rounded hover:bg-cyan-600 hover:text-white"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/products"
+                className="border border-cyan-600 text-cyan-600 py-2 px-7 rounded hover:bg-cyan-600 hover:text-white"
+              >
+                Product
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <div className="bg-white text-black pt-20">{children}</div>
       </body>
     </html>
   );
