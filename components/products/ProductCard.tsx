@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import React, { FC } from "react";
+import SafeImage from "../ui/SafeImage";
 
 interface Props {
   name: string;
@@ -11,9 +11,14 @@ interface Props {
 
 const ProductCard: FC<Props> = ({ name, image, price, id }) => {
   return (
-    <Link href={`/products/${id}`}>
+    <Link
+      href={`/products/${id}`}
+      className="w-fit block hover:shadow-cyan-600 hover:shadow-xl"
+    >
       <div className="shadow rounded-sm w-[200px] overflow-hidden">
-        <Image src={image} alt={name} width={200} height={100} />
+        <div className="w-[200px] h-[200px] overflow-hidden">
+          <SafeImage src={image} alt={name} width={200} height={350} />
+        </div>
         <div className="px-2 py-3">
           <div>${price}</div>
           <h3 className="font-semibold">{name}</h3>

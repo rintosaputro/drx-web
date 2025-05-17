@@ -1,9 +1,9 @@
 import CategoryList from "@/components/categories/CategoryList";
 import Container from "@/components/layouts/Container";
-import ProductList from "@/components/products/ProductList";
+import ProductList from "@/components/products/HomeProductList";
 import Image from "next/image";
 
-export default async function Home() {
+export default function Home() {
   return (
     <div className="min-h-screen pb-14">
       <Container>
