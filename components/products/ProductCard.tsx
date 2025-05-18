@@ -21,7 +21,7 @@ const ProductCard: FC<Props> = ({ name, image, price, id }) => {
             src={image}
             alt={name}
             width={200}
-            height={350}
+            height={100}
             className="w-[150px] sm:w-[200px] h-auto"
           />
         </div>
